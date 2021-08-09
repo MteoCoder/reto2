@@ -50,7 +50,7 @@ class Main {
     for (int i = 0; i< NumeroCursos ;i++) {
         c = new Curso();
         c.setNombreCurso(JOptionPane.showInputDialog("Ingrese el nombre del curso " + i));
-        int opcion = Menu();
+        int opcion = Menu();     
         while (opcion != 4) {
             switch (opcion) {
                 case 1:

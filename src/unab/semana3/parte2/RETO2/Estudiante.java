@@ -18,10 +18,10 @@ public class Estudiante {
     private Curso curso;
     private String nombre;
     private static String[] Materias = {"MATEMATICAS", "CIENCIAS", "INGLES", "INFORMATICA", "DEPORTES"};
-    int [][] Calificaciones = new int[5][4];
+    int [][] Calificaciones;
 
     public Estudiante() {
-
+     Calificaciones = new int[5][4];
     }
 
     public Curso getCurso() {
