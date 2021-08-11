@@ -45,38 +45,39 @@ class Main {
     int NumeroCursos = Integer.parseInt(JOptionPane.showInputDialog("Digite el total de Cursos a ingresar"));
     Estudiante e;
     Curso c;
-    
+    int opcion = 0;
     
     for (int i = 0; i< NumeroCursos ;i++) {
         c = new Curso();
         c.setNombreCurso(JOptionPane.showInputDialog("Ingrese el nombre del curso " + i));
-        int opcion = Menu();     
+        cursos.add(c);
+    }
         while (opcion != 4) {
+            opcion = Menu();
             switch (opcion) {
                 case 1:
                     e = new Estudiante();
-                    e.setCurso(c);
+                    e.setCurso(buscarCurso(cursos));
                     e.setNombre(JOptionPane.showInputDialog("Ingrese el nombre del estudiante del curso "
                             + e.getCurso().getNombreCurso()));
                     e.registrarCalificacion();
-                    c.ingresarEstudiante(e);
-                    cursos.add(c);
+                    e.getCurso().ingresarEstudiante(e);
                     break;
                 case 2:
-                    boletin(cursos);
+                    System.out.println(boletin(cursos));
                     break;
                 case 3:
-                    c.EstadoAsignaturaEstudiante(cursos);
+                    Curso.EstadoAsignaturaEstudiante(cursos);
                     break;
                 case 4:
-                    System.exit(0);
+                    opcion = 4;
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Ingrese una opcion valida");
             }
         }
-    }
-
+    
+    
 }
 
 public static int Menu() {
@@ -85,19 +86,32 @@ public static int Menu() {
                 + "1. Cargar las calificaciones estudiante.\n"
                 + "2. Imprimir boletin.\n"
                 + "3. Imprimir estado asignatura.\n"
-                + "4. Agregar Nuevo Curso"));
+                + "4. Salir"));
         return opcion;
     }
 
-    public static void boletin(ArrayList<Curso> c) {
+    public static String boletin(ArrayList<Curso> c) {
         String boletin = "";
 
         for (Curso x : c) {
-            boletin += "ESTUDIANTES DEL CURSO " + x.getNombreCurso() + "\n";
+            boletin += "ESTUDIANTES DEL CURSO " + x.getNombreCurso() + "\n\n";
             for (Estudiante a : x.getEstudiantes()) {
                 boletin += a.Boletin();
             }
         }
+        return boletin;
+    }
+    
+    public static Curso buscarCurso(ArrayList<Curso> c){
+        Curso z = null;
+        String nombreCurso = JOptionPane.showInputDialog("Ingrese el nombre del curso al que"
+                + " pertenece el estudiante");
+        for(Curso x: c){
+            if(x.getNombreCurso().equalsIgnoreCase(nombreCurso)){
+               z = x;
+            }
+        }
+        return z;
     }
 
 }

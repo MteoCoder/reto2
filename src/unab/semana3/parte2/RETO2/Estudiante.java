@@ -55,7 +55,7 @@ public class Estudiante {
         for (int i = 0; i < Calificaciones.length; i++) {
             for (int j = 0; j < Calificaciones[0].length; j++) {
                 contador++;
-                boletin += "Nota de " + Materias[puntero] + " en el Periodo " + contador + " = " + Calificaciones[i][j] + "\n";
+                boletin += "Nota de " + this.nombre + " en " +  Materias[puntero] + " en el Periodo " + contador + " = " + Calificaciones[i][j] + "\n";
 
             }
             boletin += "*******************************************\n";
@@ -91,7 +91,7 @@ public class Estudiante {
             for (int i = 0; i < Calificaciones.length; i++) {
                 for (int j = 0; j < Calificaciones[0].length; j++) {
                     if (i == 0) {
-                        estado += "Nota de " + Materias[0] + " en el "
+                        estado += "Nota de " + this.nombre + " en " + Materias[0] + " en el "
                                 + "periodo " + ++contador + " = " + Calificaciones[i][j] + "\n";
                     }
                 }
@@ -102,7 +102,7 @@ public class Estudiante {
             for (int i = 0; i < Calificaciones.length; i++) {
                 for (int j = 0; j < Calificaciones[0].length; j++) {
                     if (i == 1) {
-                        estado += "Nota de " + Materias[1] + " en el "
+                        estado += "Nota de " + this.nombre + " en " + Materias[1] + " en el "
                                 + "periodo " + ++contador + " = " + Calificaciones[i][j] + "\n";
                     }
                 }
@@ -112,7 +112,7 @@ public class Estudiante {
             for (int i = 0; i < Calificaciones.length; i++) {
                 for (int j = 0; j < Calificaciones[0].length; j++) {
                     if (i == 2) {
-                        estado += "Nota de " + Materias[2] + " en el "
+                        estado += "Nota de " + this.nombre + " en " + Materias[2] + " en el "
                                 + "periodo " + ++contador + " = " + Calificaciones[i][j] + "\n";
                     }
                 }
@@ -122,7 +122,7 @@ public class Estudiante {
             for (int i = 0; i < Calificaciones.length; i++) {
                 for (int j = 0; j < Calificaciones[0].length; j++) {
                     if (i == 2) {
-                        estado += "Nota de " + Materias[3] + " en el "
+                        estado += "Nota de " + this.nombre + " en " + Materias[3] + " en el "
                                 + "periodo " + ++contador + " = " + Calificaciones[i][j] + "\n";
                     }
                 }
@@ -132,7 +132,7 @@ public class Estudiante {
             for (int i = 0; i < Calificaciones.length; i++) {
                 for (int j = 0; j < Calificaciones[0].length; j++) {
                     if (i == 2) {
-                        estado += "Nota de " + Materias[4] + " en el "
+                        estado += "Nota de " + this.nombre + " en " + Materias[4] + " en el "
                                 + "periodo " + ++contador + " = " + Calificaciones[i][j] + "\n";
                     }
                 }

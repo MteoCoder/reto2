@@ -37,12 +37,9 @@ public class Curso {
         estudiantes.add(e);
     }
 
-    @Override
-    public String toString() {
-        return "Curso{" + "estudiantes=" + estudiantes + '}';
-    }
+ 
 
-    public void EstadoAsignaturaEstudiante(ArrayList<Curso> c) {
+    public static void EstadoAsignaturaEstudiante(ArrayList<Curso> c) {
 
         String nombre = JOptionPane.showInputDialog("Ingrese el nombre del estudiante");
         for (Curso a : c) {
