@@ -121,7 +121,7 @@ public class Estudiante {
             int contador = 0;
             for (int i = 0; i < Calificaciones.length; i++) {
                 for (int j = 0; j < Calificaciones[0].length; j++) {
-                    if (i == 2) {
+                    if (i == 3) {
                         estado += "Nota de " + this.nombre + " en " + Materias[3] + " en el "
                                 + "periodo " + ++contador + " = " + Calificaciones[i][j] + "\n";
                     }
@@ -131,7 +131,7 @@ public class Estudiante {
             int contador = 0;
             for (int i = 0; i < Calificaciones.length; i++) {
                 for (int j = 0; j < Calificaciones[0].length; j++) {
-                    if (i == 2) {
+                    if (i == 4) {
                         estado += "Nota de " + this.nombre + " en " + Materias[4] + " en el "
                                 + "periodo " + ++contador + " = " + Calificaciones[i][j] + "\n";
                     }
